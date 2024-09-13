@@ -1,79 +1,30 @@
 #include<stdio.h>
+
 int main(){
-	int n;
-	printf("Enter the number\n");
-	scanf("%d",&n);
-	if(n > 0){
-		switch(n){
-			case 1:
-				printf("one\n");
-				break;
-			case 2:
-				printf("two\n");
-				break;
-			case 3:
-				printf("three\n");
-				break;
-			case 4:
-				printf("four\n");
-				break;
-			case 6:
-				printf("six\n");
-				break;
-			case 7:
-				printf("seven\n");
-				break;
-			case 8:
-				printf("eight\n");
-				break;
-			case 9:
-				printf("nine\n");
-				break;
-			case 10:
-				printf("ten\n");
-				break;
-			case 11:
-				printf("eleven\n");
-				break;
-			case 12:
-				printf("twelve\n");
-				break;
-			case 13:
-				printf("thirteen\n");
-				break;
-			case 14:
-				printf("fourteen\n");
-				break;
-			case 15:
-				printf("fifteen\n");
-				break;
-			case 16:
-				printf("sixteen\n");
-				break;
-			case 17:
-				printf("seventeen\n");
-				break;
-			case 18:
-				printf("eighteen\n");
-				break;
-			case 19:
-				printf("nineteen\n");
-				break;
-			case 20:
-				printf("twenty\n");
-				break;
-			case 5:
-				printf("five\n");
-				break;
-			default:
-				printf("Number is greater then 20");
-				break;	
-		}
-		
+	float units, bill;
+	printf("Enter the units\n");
+	scanf("%f",&units);
+	if(units < 0){
+		printf("units should be a positive real number ");
 	}
 	else{
-		printf("Invalid");
+		if(units >= 0 && units <= 30){
+			bill = units*0.6;
+		}
+		else if(units > 30 && units <=110){
+			bill = 18 + (units - 30)*0.85;
+		}
+		else if(units > 110 && units <=210){
+			bill = 86 + (units - 110)*1.3;
+		}
+		else if(units > 210){
+			bill = 216 + (units - 210)*1.3;
+		}
+		else{
+			printf("Invalid Data type");
+		}
 	}
 	
+	printf("Your bill is %fPKR",bill);
 	return 0;
 }
