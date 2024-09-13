@@ -3,7 +3,7 @@ int main(){
 	int n;
 	printf("Enter the number\n");
 	scanf("%d",&n);
-	if(n >= 1 && n <= 20){
+	if(n > 0){
 		switch(n){
 			case 1:
 				printf("one\n");
@@ -66,13 +66,13 @@ int main(){
 				printf("five\n");
 				break;
 			default:
-				printf("Invalid");
+				printf("Number is greater then 20");
 				break;	
 		}
 		
 	}
 	else{
-		printf("number is greater then 20");
+		printf("Invalid");
 	}
 	
 	return 0;
